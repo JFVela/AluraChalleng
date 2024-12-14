@@ -23,7 +23,7 @@ async function listarProductos() {
 }
 
 // Función para crear un producto
-async function crearProducto(nombre, precio, url_imagen) {
+async function enviarProducto(nombre, precio, url_imagen) {
     try {
         const respuesta = await fetch("http://localhost:3000/productos", {
             method: "POST",
@@ -52,5 +52,5 @@ async function crearProducto(nombre, precio, url_imagen) {
 // Exportar las funciones para uso externo
 export const conectaAPI = {
     listarProductos,
-    crearProducto
+    enviarProducto
 };

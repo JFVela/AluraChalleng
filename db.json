@@ -1,52 +1,58 @@
 {
-    "productos": [
-      {
-        "id": 1,
-        "nombre": "LEGO Star Wars Millennium Falcon",
-        "precio": 159.99,
-        "url_imagen": "https://lego.eliteoficial.com/cdn/shop/files/75192_Box1_V39_86b074c3-83b0-4049-9d2f-a377d8c8f4e7.jpg?v=1698342897"
-      },
-      {
-        "id": 2,
-        "nombre": "LEGO Harry Potter Hogwarts Castle",
-        "precio": 399.99,
-        "url_imagen": "https://m.media-amazon.com/images/I/81QqyFMqW7L.jpg"
-      },
-      {
-        "id": 3,
-        "nombre": "LEGO Technic Bugatti Chiron",
-        "precio": 349.99,
-        "url_imagen": "https://catserviceperu.com/cdn/shop/products/42083-lego-technic-bugatti-chiron-3599-piezas-716374_1280x.jpg?v=1666111440"
-      },
-      {
-        "id": 4,
-        "nombre": "LEGO City Police Station",
-        "precio": 99.99,
-        "url_imagen": "https://m.media-amazon.com/images/I/A1wLLVjNhaL._AC_SL1500_.jpg"
-      },
-      {
-        "id": 5,
-        "nombre": "LEGO Creator Expert Roller Coaster",
-        "precio": 379.99,
-        "url_imagen": "https://m.media-amazon.com/images/I/71ay7pWgqJL._AC_SL1000_.jpg"
-      },
-      {
-        "id": 6,
-        "nombre": "LEGO Ninjago City Gardens",
-        "precio": 299.99,
-        "url_imagen": "https://m.media-amazon.com/images/I/71ZGepSnGhL._AC_SL1000_.jpg"
-      },
-      {
-        "id": 7,
-        "nombre": "LEGO Ideas Tree House",
-        "precio": 199.99,
-        "url_imagen": "https://m.media-amazon.com/images/I/81xlXC3VLIL.jpg"
-      },
-      {
-        "id": 8,
-        "nombre": "LEGO Architecture Statue of Liberty",
-        "precio": 119.99,
-        "url_imagen": "https://www.lego.com/cdn/cs/set/assets/blt0bc1f2fb183e37ed/21042_alt3.jpg?fit=bounds&format=jpg&quality=80&width=1500&height=1500&dpr=1"
-      }
-    ]
-  }
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "LEGO Star Wars Millennium Falcon",
+      "precio": 159.99,
+      "url_imagen": "https://lego.eliteoficial.com/cdn/shop/files/75192_Box1_V39_86b074c3-83b0-4049-9d2f-a377d8c8f4e7.jpg?v=1698342897"
+    },
+    {
+      "id": 2,
+      "nombre": "LEGO Harry Potter Hogwarts Castle",
+      "precio": 399.99,
+      "url_imagen": "https://m.media-amazon.com/images/I/81QqyFMqW7L.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "LEGO Technic Bugatti Chiron",
+      "precio": 349.99,
+      "url_imagen": "https://catserviceperu.com/cdn/shop/products/42083-lego-technic-bugatti-chiron-3599-piezas-716374_1280x.jpg?v=1666111440"
+    },
+    {
+      "id": 4,
+      "nombre": "LEGO City Police Station",
+      "precio": 99.99,
+      "url_imagen": "https://m.media-amazon.com/images/I/A1wLLVjNhaL._AC_SL1500_.jpg"
+    },
+    {
+      "id": 5,
+      "nombre": "LEGO Creator Expert Roller Coaster",
+      "precio": 379.99,
+      "url_imagen": "https://m.media-amazon.com/images/I/71ay7pWgqJL._AC_SL1000_.jpg"
+    },
+    {
+      "id": 6,
+      "nombre": "LEGO Ninjago City Gardens",
+      "precio": 299.99,
+      "url_imagen": "https://m.media-amazon.com/images/I/71ZGepSnGhL._AC_SL1000_.jpg"
+    },
+    {
+      "id": 7,
+      "nombre": "LEGO Ideas Tree House",
+      "precio": 199.99,
+      "url_imagen": "https://m.media-amazon.com/images/I/81xlXC3VLIL.jpg"
+    },
+    {
+      "id": 8,
+      "nombre": "LEGO Architecture Statue of Liberty",
+      "precio": 119.99,
+      "url_imagen": "https://www.lego.com/cdn/cs/set/assets/blt0bc1f2fb183e37ed/21042_alt3.jpg?fit=bounds&format=jpg&quality=80&width=1500&height=1500&dpr=1"
+    },
+    {
+      "nombre": "Lego Videojuego",
+      "precio": 180,
+      "url_imagen": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000013536/16692d987f2984b4b32b81859e1448f3e3abfcf1d8d644c73b74c8921ef32975",
+      "id": 9
+    }
+  ]
+}

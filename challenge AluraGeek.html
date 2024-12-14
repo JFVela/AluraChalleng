@@ -28,24 +28,25 @@
             <div class="tituloProducto">
                 <h1 class="seccion__titulo">Agregar Producto</h1>
             </div>
-            <form id="form-agregar-producto">
+            <form id="form-agregar-producto" data-formulario>
                 <div>
                     <input class="clase__input" type="text" id="nombre" name="nombre"
-                        placeholder="Nombre del producto..." required>
+                        placeholder="Nombre del producto..." required data-nombre>
                 </div>
                 <div>
-                    <input class="clase__input" type="number" id="precio" name="precio" placeholder="Precio..."
-                        required>
+                    <input class="clase__input" type="number" id="precio" name="precio" placeholder="Precio..." required
+                        data-precio>
                 </div>
                 <div>
                     <input class="clase__input" type="text" id="imagen" name="imagen" placeholder="URL de la imagen..."
-                        required>
+                        required data-url-imagen>
                 </div>
                 <div class="botones">
                     <button type="submit">Enviar</button>
                     <button type="reset">Limpiar</button>
                 </div>
             </form>
+
         </section>
     </main>
     <footer class="footer">
@@ -59,6 +60,7 @@
         <p>ALURA LATAM - 2024</p>
     </footer>
     <script type="module" src="assets/js/listarProductos.js"></script>
+    <script type="module" src="assets/js/agregarProductos.js"></script>
 </body>
 
 </html>
