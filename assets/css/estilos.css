@@ -75,37 +75,57 @@ header {
   padding: 10px;
   border-radius: 10px;
   border: 5px solid black;
+  width: 190px; /* Ancho fijo para todas las tarjetas */
+  height: 300px; /* Altura fija para todas las tarjetas */
+  display: flex;
+  flex-direction: column;
 }
+
 .imagen__producto {
   border-radius: 10px;
   border: 5px solid black;
   width: 180px;
   height: 180px;
-  object-fit: cover; /* Ajusta la imagen para que llene el contenedor sin deformarse */
-  overflow: hidden; /* Evita el desbordamiento */
+  object-fit: cover;
+  overflow: hidden;
 }
 
 .card-container--info {
   margin-top: 10px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  justify-content: space-between;
+  flex-grow: 1; /* Permite que este contenedor crezca para llenar el espacio restante */
   color: white;
   font-family: "IBM Plex Mono", monospace;
 }
+
 .card-container--info p {
   margin: 0;
   font-size: 15px;
   font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limita el título a 2 líneas */
+  -webkit-box-orient: vertical;
 }
+
 .card-container--value {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: auto; /* Empuja este contenedor hacia abajo */
 }
+
 .card-container--value p {
   font-size: 16px;
   font-weight: bold;
+}
+
+.icono__tacho {
+  width: 20px; /* Ajusta según sea necesario */
+  height: 20px; /* Ajusta según sea necesario */
 }
 .agregar-producto {
   padding: 40px;
