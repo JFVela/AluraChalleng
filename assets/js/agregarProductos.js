@@ -9,9 +9,6 @@ async function crearProducto(evento) {
     const precio = parseFloat(document.querySelector("[data-precio]").value);
     const urlImagen = document.querySelector("[data-url-imagen]").value;
 
-    // Generar ID o descripción aleatoria
-    const idAleatorio = Math.floor(Math.random() * 10000).toString(); // Número entre 0 y 9999
-
     try {
         // Validar entradas antes de enviar
         if (!nombre || !urlImagen || isNaN(precio) || precio <= 0) {
@@ -19,7 +16,7 @@ async function crearProducto(evento) {
         }
 
         // Enviar datos a la API
-        await conectaAPI.enviarProducto(nombre, precio, urlImagen, idAleatorio);
+        await conectaAPI.enviarProducto(nombre, precio, urlImagen);
         location.reload();
     } catch (error) {
         alert(`Error al enviar el producto: ${error.message}`);
