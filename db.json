@@ -1,12 +1,6 @@
 {
   "productos": [
     {
-      "id": 1,
-      "nombre": "LEGO Star Wars Millennium Falcon",
-      "precio": 159.99,
-      "url_imagen": "https://lego.eliteoficial.com/cdn/shop/files/75192_Box1_V39_86b074c3-83b0-4049-9d2f-a377d8c8f4e7.jpg?v=1698342897"
-    },
-    {
       "id": 2,
       "nombre": "LEGO Harry Potter Hogwarts Castle",
       "precio": 399.99,
@@ -53,12 +47,6 @@
       "precio": 180,
       "url_imagen": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000013536/16692d987f2984b4b32b81859e1448f3e3abfcf1d8d644c73b74c8921ef32975",
       "id": 9
-    },
-    {
-      "nombre": "VIDEOJUEGO LEGO",
-      "precio": 150,
-      "url_imagen": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000013536/16692d987f2984b4b32b81859e1448f3e3abfcf1d8d644c73b74c8921ef32975",
-      "id": 10
     }
   ]
 }

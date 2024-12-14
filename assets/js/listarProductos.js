@@ -2,7 +2,7 @@ import { conectaAPI } from "./conectaAPI.js";
 const lista = document.querySelector("[data-lista]");
 
 // Función para crear una card de producto
-export default function crearCardProducto(nombre, precio, url_imagen) {
+export default function crearCardProducto(id, nombre, precio, url_imagen) {
     const producto = document.createElement("li");
 
     producto.innerHTML = `
@@ -27,6 +27,7 @@ export default function crearCardProducto(nombre, precio, url_imagen) {
         } catch (error) {
             alert("Error al eliminar el producto, inténtalo de nuevo.");
         }
+        console.log(id);
     });
 
     return producto;
@@ -36,7 +37,7 @@ async function listarProductos() {
     try {
         const listaAPI = await conectaAPI.listarProductos();
         listaAPI.forEach(producto => {
-            lista.appendChild(crearCardProducto(producto.nombre, producto.precio, producto.url_imagen));
+            lista.appendChild(crearCardProducto(producto.id, producto.nombre, producto.precio, producto.url_imagen));
         });
     } catch {
         lista.innerHTML = "<h2 class='mensaje__titulo'>Error al cargar los productos</h2>";
