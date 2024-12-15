@@ -3,6 +3,7 @@
 //https://fake-api-beryl.vercel.app/productos
 //LOCAL
 //http://localhost:3000/productos
+
 // Función para listar productos
 async function listarProductos() {
     try {
@@ -45,6 +46,7 @@ async function enviarProducto(nombre, precio, url_imagen) {
         }
 
         const nuevoProducto = await respuesta.json();
+        // Si el producto se agrega correctamente, lo devolvemos para actualizar la UI
         return nuevoProducto;
     } catch (error) {
         console.error("Error al crear producto:", error);
@@ -52,7 +54,8 @@ async function enviarProducto(nombre, precio, url_imagen) {
     }
 }
 
-async function eliminarProducto(id) {
+// Función para eliminar un producto
+async function eliminarProducto(id, setProductos) {
     try {
         const respuesta = await fetch(`https://fake-api-beryl.vercel.app/productos/${id}`, {
             method: "DELETE",
@@ -60,14 +63,20 @@ async function eliminarProducto(id) {
                 "Content-Type": "application/json",
             },
         });
+
         if (!respuesta.ok) {
             throw new Error("No se pudo eliminar el producto");
         }
+
+        // Actualizar la lista de productos eliminando el producto eliminado sin recargar la página
+        setProductos(prevProductos => prevProductos.filter(producto => producto.id !== id));
+
     } catch (error) {
         console.error("Error al eliminar el producto:", error);
         throw error; // Lanza el error para manejarlo fuera de esta función
     }
 }
+
 // Exportar las funciones para uso externo
 export const conectaAPI = {
     listarProductos,
