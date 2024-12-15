@@ -63,13 +63,24 @@ async function eliminarProducto(id) {
         },
     });
 
-    // Si la respuesta es correcta, recargar la página
+    // Verificar si la eliminación fue exitosa
     if (respuesta.ok) {
-        location.reload();  // Recarga la página para reflejar los cambios
+        // Después de eliminar, verificamos si el producto aún existe
+        const checkExistencia = await fetch(`https://fake-api-beryl.vercel.app/productos/${id}`);
+        if (checkExistencia.ok) {
+            // Si el producto aún existe (no fue eliminado correctamente), no recargamos
+            console.log("El producto no fue eliminado correctamente.");
+        } else {
+            // Si el producto ya no existe (eliminado correctamente), recargamos la página
+            console.log("Producto eliminado correctamente.");
+            location.reload();  // Recarga la página para reflejar los cambios
+        }
     } else {
-        console.error("No se pudo eliminar el producto.");
+        // Si la respuesta no es exitosa, mostramos un mensaje de error
+        console.error("Error al intentar eliminar el producto.");
     }
 }
+
 
 // Exportar las funciones para uso externo
 export const conectaAPI = {
