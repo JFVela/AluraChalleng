@@ -1,9 +1,12 @@
 // Archivo: conectarApi.js
-
+//WEB
+//https://fake-api-beryl.vercel.app/productos
+//LOCAL
+//http://localhost:3000/productos
 // Función para listar productos
 async function listarProductos() {
     try {
-        const respuesta = await fetch("http://localhost:3000/productos", {
+        const respuesta = await fetch("https://fake-api-beryl.vercel.app/productos", {
             method: "GET",
             headers: {
                 "Content-type": "application/json"
@@ -25,7 +28,7 @@ async function listarProductos() {
 // Función para crear un producto
 async function enviarProducto(nombre, precio, url_imagen) {
     try {
-        const respuesta = await fetch("http://localhost:3000/productos", {
+        const respuesta = await fetch("https://fake-api-beryl.vercel.app/productos", {
             method: "POST",
             headers: {
                 "Content-type": "application/json"
@@ -51,7 +54,7 @@ async function enviarProducto(nombre, precio, url_imagen) {
 
 async function eliminarProducto(id) {
     try {
-        const respuesta = await fetch(`http://localhost:3000/productos/${id}`, {
+        const respuesta = await fetch(`https://fake-api-beryl.vercel.app/productos/${id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
