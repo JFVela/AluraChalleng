@@ -16,7 +16,6 @@ async function crearProducto(evento) {
 
         // Enviar datos a la API
         await conectaAPI.enviarProducto(nombre, precio, urlImagen);
-        location.reload();
     } catch (error) {
         alert(`Error al enviar el producto: ${error.message}`);
     }

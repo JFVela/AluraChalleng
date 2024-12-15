@@ -47,7 +47,7 @@ async function enviarProducto(nombre, precio, url_imagen) {
 
         const nuevoProducto = await respuesta.json();
         // Si el producto se agrega correctamente, lo devolvemos para actualizar la UI
-
+        return nuevoProducto;
     } catch (error) {
         console.error("Error al crear producto:", error);
         return null;
