@@ -1,19 +1,12 @@
 {
   "name": "alurachalleng",
   "version": "1.0.0",
-  "description": "Programación de JSON usando crud, json server y node.js",
-  "main": "index.js",
+  "description": "Gestión de productos usando JSON Server y Node.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "concurrently \"npm run start\""
+    "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "concurrently": "^9.1.0"
-  },
-  "devDependencies": {
     "json-server": "^1.0.0-beta.3"
   }
 }

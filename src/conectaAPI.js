@@ -33,11 +33,3 @@ export const eliminarProducto = async (id) => {
         console.error("Error al eliminar producto:", error);
     }
 };
-
-
-// Exportar las funciones para uso externo
-export const conectaAPI = {
-    listarProductos,
-    eliminarProducto,
-    enviarProducto
-}
