@@ -1,73 +1,43 @@
-// Archivo: conectarApi.js
+const url = "/api/productos";
 
-// Función para listar productos
-async function listarProductos() {
+export const listarProductos = async () => {
     try {
-        const respuesta = await fetch("http://localhost:3000/productos", {
-            method: "GET",
-            headers: {
-                "Content-type": "application/json"
-            }
-        });
-
-        if (!respuesta.ok) {
-            throw new Error("Error al obtener los productos: " + respuesta.status);
-        }
-
+        const respuesta = await fetch(url);
         const productos = await respuesta.json();
         return productos;
     } catch (error) {
         console.error("Error al listar productos:", error);
-        return [];
     }
-}
+};
 
-// Función para crear un producto
-async function enviarProducto(nombre, precio, url_imagen) {
+export const enviarProducto = async (producto) => {
     try {
-        const respuesta = await fetch("http://localhost:3000/productos", {
+        await fetch(url, {
             method: "POST",
-            headers: {
-                "Content-type": "application/json"
-            },
-            body: JSON.stringify({
-                nombre: nombre,
-                precio: parseFloat(precio),
-                url_imagen: url_imagen
-            })
-        });
-
-        if (!respuesta.ok) {
-            throw new Error("Error al crear el producto: " + respuesta.status);
-        }
-
-        const nuevoProducto = await respuesta.json();
-        return nuevoProducto;
-    } catch (error) {
-        console.error("Error al crear producto:", error);
-        return null;
-    }
-}
-
-async function eliminarProducto(id) {
-    try {
-        const respuesta = await fetch(`http://localhost:3000/productos/${id}`, {
-            method: "DELETE",
+            body: JSON.stringify(producto),
             headers: {
                 "Content-Type": "application/json",
             },
         });
-        if (!respuesta.ok) {
-            throw new Error("No se pudo eliminar el producto");
-        }
     } catch (error) {
-        console.error("Error al eliminar el producto:", error);
-        throw error; // Lanza el error para manejarlo fuera de esta función
+        console.error("Error al enviar producto:", error);
     }
-}
+};
+
+export const eliminarProducto = async (id) => {
+    try {
+        await fetch(`${url}/${id}`, {
+            method: "DELETE",
+        });
+    } catch (error) {
+        console.error("Error al eliminar producto:", error);
+    }
+};
+
+
 // Exportar las funciones para uso externo
 export const conectaAPI = {
     listarProductos,
     eliminarProducto,
     enviarProducto
-};
+}
