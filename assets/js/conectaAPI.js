@@ -55,27 +55,19 @@ async function enviarProducto(nombre, precio, url_imagen) {
 }
 
 // Función para eliminar un producto
-async function eliminarProducto(id, setProductos) {
-    try {
-        const respuesta = await fetch(`https://fake-api-beryl.vercel.app/productos/${id}`, {
-            method: "DELETE",
-            headers: {
-                "Content-Type": "application/json",
-            },
-        });
+async function eliminarProducto(id) {
+    const respuesta = await fetch(`https://fake-api-beryl.vercel.app/productos/${id}`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    });
 
-        if (!respuesta.ok) {
-            // Si la respuesta no es correcta, lanzamos un error
-            throw new Error("No se pudo eliminar el producto. Intenta nuevamente.");
-        }
-
-        // Actualizar la lista de productos eliminando el producto eliminado sin recargar la página
-        setProductos(prevProductos => prevProductos.filter(producto => producto.id !== id));
-
-        console.log(`Producto con id ${id} eliminado correctamente`);
-    } catch (error) {
-        console.error("Error al eliminar el producto:", error);
-        alert(error.message); // Mostrar un mensaje en caso de error
+    // Si la respuesta es correcta, recargar la página
+    if (respuesta.ok) {
+        location.reload();  // Recarga la página para reflejar los cambios
+    } else {
+        console.error("No se pudo eliminar el producto.");
     }
 }
 
