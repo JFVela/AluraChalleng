@@ -37,16 +37,10 @@
       "url_imagen": "https://m.media-amazon.com/images/I/81xlXC3VLIL.jpg"
     },
     {
-      "id": 8,
-      "nombre": "LEGO Architecture Statue of Liberty",
-      "precio": 119.99,
-      "url_imagen": "https://www.lego.com/cdn/cs/set/assets/blt0bc1f2fb183e37ed/21042_alt3.jpg?fit=bounds&format=jpg&quality=80&width=1500&height=1500&dpr=1"
-    },
-    {
-      "nombre": "Lego Videojuego",
-      "precio": 180,
+      "nombre": "Juancito",
+      "precio": 16,
       "url_imagen": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000013536/16692d987f2984b4b32b81859e1448f3e3abfcf1d8d644c73b74c8921ef32975",
-      "id": 9
+      "id": 8
     }
   ]
 }
