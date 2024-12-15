@@ -27,7 +27,6 @@ export default function crearCardProducto(id, nombre, precio, url_imagen) {
         } catch (error) {
             alert("Error al eliminar el producto, inténtalo de nuevo.");
         }
-        console.log(id);
     });
 
     return producto;

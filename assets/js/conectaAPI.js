@@ -65,15 +65,17 @@ async function eliminarProducto(id, setProductos) {
         });
 
         if (!respuesta.ok) {
-            throw new Error("No se pudo eliminar el producto");
+            // Si la respuesta no es correcta, lanzamos un error
+            throw new Error("No se pudo eliminar el producto. Intenta nuevamente.");
         }
 
         // Actualizar la lista de productos eliminando el producto eliminado sin recargar la página
         setProductos(prevProductos => prevProductos.filter(producto => producto.id !== id));
 
+        console.log(`Producto con id ${id} eliminado correctamente`);
     } catch (error) {
         console.error("Error al eliminar el producto:", error);
-        throw error; // Lanza el error para manejarlo fuera de esta función
+        alert(error.message); // Mostrar un mensaje en caso de error
     }
 }
 
