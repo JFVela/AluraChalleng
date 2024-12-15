@@ -1,4 +1,4 @@
-import { conectaAPI } from "./conectaAPI.js";
+import { conectaAPI } from "../../src/conectaAPI";
 const lista = document.querySelector("[data-lista]");
 
 // Función para crear una card de producto
