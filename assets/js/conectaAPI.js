@@ -64,23 +64,10 @@ async function eliminarProducto(id) {
         console.error("Error al eliminar el producto:", error);
         throw error; // Lanza el error para manejarlo fuera de esta función
     }
-<<<<<<< HEAD
-};
-
-export const eliminarProducto = async (id) => {
-    try {
-        await fetch(`${url}/${id}`, {
-            method: "DELETE",
-        });
-    } catch (error) {
-        console.error("Error al eliminar producto:", error);
-    }
-=======
 }
 // Exportar las funciones para uso externo
 export const conectaAPI = {
     listarProductos,
     eliminarProducto,
     enviarProducto
->>>>>>> parent of 5a54f92 (esperemos que funcione)
 };
