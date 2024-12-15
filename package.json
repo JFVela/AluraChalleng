@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "alurachalleng",
   "version": "1.0.0",
   "description": "Gestión de productos usando JSON Server y Node.js",
@@ -8,5 +9,9 @@
   },
   "dependencies": {
     "json-server": "^1.0.0-beta.3"
+=======
+  "dependencies": {
+    "json-server": "^0.17.4"
+>>>>>>> parent of 5a54f92 (esperemos que funcione)
   }
 }

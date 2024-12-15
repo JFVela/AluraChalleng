@@ -1,27 +1,70 @@
-const url = "/api/productos";
+// Archivo: conectarApi.js
 
-export const listarProductos = async () => {
+// Función para listar productos
+async function listarProductos() {
     try {
-        const respuesta = await fetch(url);
+        const respuesta = await fetch("http://localhost:3000/productos", {
+            method: "GET",
+            headers: {
+                "Content-type": "application/json"
+            }
+        });
+
+        if (!respuesta.ok) {
+            throw new Error("Error al obtener los productos: " + respuesta.status);
+        }
+
         const productos = await respuesta.json();
         return productos;
     } catch (error) {
         console.error("Error al listar productos:", error);
+        return [];
     }
-};
+}
 
-export const enviarProducto = async (producto) => {
+// Función para crear un producto
+async function enviarProducto(nombre, precio, url_imagen) {
     try {
-        await fetch(url, {
+        const respuesta = await fetch("http://localhost:3000/productos", {
             method: "POST",
-            body: JSON.stringify(producto),
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify({
+                nombre: nombre,
+                precio: parseFloat(precio),
+                url_imagen: url_imagen
+            })
+        });
+
+        if (!respuesta.ok) {
+            throw new Error("Error al crear el producto: " + respuesta.status);
+        }
+
+        const nuevoProducto = await respuesta.json();
+        return nuevoProducto;
+    } catch (error) {
+        console.error("Error al crear producto:", error);
+        return null;
+    }
+}
+
+async function eliminarProducto(id) {
+    try {
+        const respuesta = await fetch(`http://localhost:3000/productos/${id}`, {
+            method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
             },
         });
+        if (!respuesta.ok) {
+            throw new Error("No se pudo eliminar el producto");
+        }
     } catch (error) {
-        console.error("Error al enviar producto:", error);
+        console.error("Error al eliminar el producto:", error);
+        throw error; // Lanza el error para manejarlo fuera de esta función
     }
+<<<<<<< HEAD
 };
 
 export const eliminarProducto = async (id) => {
@@ -32,4 +75,12 @@ export const eliminarProducto = async (id) => {
     } catch (error) {
         console.error("Error al eliminar producto:", error);
     }
+=======
+}
+// Exportar las funciones para uso externo
+export const conectaAPI = {
+    listarProductos,
+    eliminarProducto,
+    enviarProducto
+>>>>>>> parent of 5a54f92 (esperemos que funcione)
 };
