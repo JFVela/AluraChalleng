@@ -1,4 +1,4 @@
-import { conectaAPI } from "../../src/conectaAPI";
+import { conectaAPI } from "./conectaAPI.js";
 const formulario = document.querySelector("[data-formulario]");
 
 async function crearProducto(evento) {
